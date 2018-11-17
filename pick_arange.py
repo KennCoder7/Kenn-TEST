@@ -10,9 +10,9 @@ c = np.arange(0, 20)
 
 def pick_arange(arange, num):
     if num > len(arange):
-        print("# Error pick!")
+        return arange
     else:
-        output = []
+        output = np.array([], dtype=arange.dtype)
         seg = round((len(arange)) / num, 2)
         for n in range(num):
             output = np.append(output, arange[int(seg*n)])
@@ -22,6 +22,9 @@ def pick_arange(arange, num):
 print(pick_arange(a, 10))
 print(pick_arange(b, 10))
 print(pick_arange(c, 10))
-# [0. 1. 2. 3. 4. 5. 6. 7. 8. 9.]
-# [ 0.  1.  3.  4.  6.  7.  9. 10. 12. 13.]
-# [ 0.  2.  4.  6.  8. 10. 12. 14. 16. 18.]
+# [0 1 2 3 4 5 6 7 8 9]
+# [ 0  1  3  4  6  7  9 10 12 13]
+# [ 0  2  4  6  8 10 12 14 16 18]
+
+print(pick_arange(a, 11))
+# [0 1 2 3 4 5 6 7 8 9]
