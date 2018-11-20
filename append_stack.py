@@ -22,7 +22,12 @@ import numpy as np
 # #  [3 4]
 # #  [5 6]]
 
-a = 1
-arr = []
+# a = 1
+# arr = []
+# arr = np.append(arr, a)
+# print(arr)  # [1.]
+
+a = 'a1'
+arr = [a]
 arr = np.append(arr, a)
-print(arr)  # [1.]
+print(arr)  # ['a1' 'a1']
