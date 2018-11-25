@@ -16,5 +16,5 @@ plt.plot(x2, y2, 'go')
 plt.title("Kenn Plot")
 plt.xlabel("x")
 plt.ylabel("y")
-plt.grid(True)  # 网线
+# plt.grid(True)  # 网线
 plt.show()
