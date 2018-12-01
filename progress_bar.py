@@ -1,6 +1,6 @@
 import time
 EACH_STEP_COST_TIME = 0.3
-PROCESS_TOTAL_STEP = 30
+PROCESS_TOTAL_STEP = 40
 
 # print("Flowing light:")
 # for i in range(LENGTH):
@@ -12,10 +12,8 @@ PROCESS_TOTAL_STEP = 30
 
 
 def process_bar(current_state, total_state, bar_length=20):
-    bar = ['['] + ['-'] * bar_length + [']']
-    current_bar = int(current_state/total_state*bar_length)
-    for j in range(current_bar+1):
-        bar[j+1] = '#'
+    current_bar = int(current_state / total_state * bar_length)
+    bar = ['['] + ['#'] * current_bar + ['-'] * (bar_length-current_bar) + [']']
     bar_show = ''.join(bar)
     print('\r{}%d%%'.format(bar_show) % ((current_state+1)/total_state*100), end='')
     if current_state == total_state-1:
