@@ -1,8 +1,10 @@
 import numpy as np
-
+arr = np.arange(1, 11)
+arr1 = np.arange(2, 12)
 i = np.arange(10)
 np.random.shuffle(i)
-print(i)
+print(arr[i])
+print(arr1[i])
 #
 # array = np.array([0, 0])
 # for i in range(10):
